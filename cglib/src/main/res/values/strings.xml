@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">cgModule</string>
+
+    <string name="previous">이전</string>
+    <string name="confirm">확인</string>
+    <string name="yes">네</string>
+    <string name="no">아니요</string>
+
+    <string name="sample_1">샘플</string>
+    <string name="sample_2">샘플 2</string>
+
+</resources>
