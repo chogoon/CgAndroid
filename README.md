@@ -5,6 +5,8 @@
 
 # Cg - Base android
 
+DATABINDING
+MVVM + VIEWMODEL
 
 ## Setup
 Add the JitPack repository in your build.gradle (top level module):
