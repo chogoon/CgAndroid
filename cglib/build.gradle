@@ -51,7 +51,7 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-scalars:2.7.1'
     implementation 'com.squareup.retrofit2:retrofit:2.7.1'
     implementation 'com.squareup.retrofit2:converter-gson:2.7.1'
-    implementation 'io.reactivex.rxjava2:rxjava:2.2.9'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.17'
 
     // okhttp
     implementation 'com.squareup.okhttp3:okhttp:4.3.1'
@@ -70,6 +70,14 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
+    // SharedPreference core
+    implementation 'com.chibatching.kotpref:kotpref:2.10.0'
+    // optional, auto initialization module
+    implementation 'com.chibatching.kotpref:initializer:2.10.0'
+    // optional, support saving enum value and ordinal
+    implementation 'com.chibatching.kotpref:enum-support:2.10.0'
+    //date time
+    implementation 'joda-time:joda-time:2.10.5'
 }
 
 apply plugin: 'com.github.dcendents.android-maven'

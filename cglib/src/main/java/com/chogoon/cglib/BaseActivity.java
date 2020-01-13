@@ -129,9 +129,7 @@ public abstract class BaseActivity<VDB extends ViewDataBinding, VM extends CgVie
     }
 
     @Override
-    public void onItemClick(View v) {
-
-    }
+    public void onItemClick(View v) { }
 
     @Override
     public final void onClick(View v) {
