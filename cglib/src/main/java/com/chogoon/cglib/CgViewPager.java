@@ -10,6 +10,8 @@ import androidx.viewpager.widget.ViewPager;
 
 import java.lang.reflect.Field;
 
+/** Use BaseViewPager **/
+@Deprecated
 public class CgViewPager extends ViewPager {
 
     public CgViewPager(Context context) {

@@ -21,9 +21,6 @@ import androidx.lifecycle.ViewModelStoreOwner;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
-import com.chogoon.cglib.BaseModel;
-import com.chogoon.cglib.OnSingleClickListener;
-
 
 public abstract class BaseActivity<VDB extends ViewDataBinding, VM extends CgViewModel> extends AppCompatActivity implements ViewModelStoreOwner, SwipeRefreshLayout.OnRefreshListener, OnSingleClickListener {
 
@@ -46,8 +43,7 @@ public abstract class BaseActivity<VDB extends ViewDataBinding, VM extends CgVie
 
     protected abstract void onCreateView(Bundle savedInstanceState);
 
-    protected void updateView(Object data) {
-    }
+    protected void updateView(Object data) { }
 
     public static void start(Activity activity, @NonNull Class clazz) {
         start(activity, clazz, null);
