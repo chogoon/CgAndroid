@@ -64,6 +64,10 @@ public class CgUtils {
         return ActivityCompat.getColor(context, id);
     }
 
+    public static String getTag(Class clazz) {
+        return clazz.getSimpleName();
+    }
+
     public static String getSHA256(String str) {
         String encrypt = "";
         try {

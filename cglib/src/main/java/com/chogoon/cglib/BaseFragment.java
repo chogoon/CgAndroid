@@ -38,11 +38,6 @@ public abstract class BaseFragment<VDB extends ViewDataBinding, VM extends CgVie
     private VDB binding;
     private VM viewmodel;
 
-
-    public static String getTag(Class clz) {
-        return clz.getSimpleName();
-    }
-
     protected void updateView(Object data) {
 
     }
