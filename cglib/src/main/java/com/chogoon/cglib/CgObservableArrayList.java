@@ -10,7 +10,6 @@ public class CgObservableArrayList<T> extends ObservableArrayList<T> {
 
     @Override
     public boolean addAll(Collection<? extends T> c) {
-        CgLog.e(c.size());
         if(c.size() == 0) {
             listeners.notifyInserted(this, 0, 0);
         }
