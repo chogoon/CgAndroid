@@ -24,6 +24,12 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 public abstract class BaseActivity<VDB extends ViewDataBinding, VM extends CgViewModel> extends AppCompatActivity implements ViewModelStoreOwner, SwipeRefreshLayout.OnRefreshListener, OnSingleClickListener {
 
+//    static {
+//        System.loadLibrary("native-lib");
+//    }
+
+//    public native String stringFromJNI();
+
     public static final String _DATA = "_DATA";
     public static final String _REFRESH = "_REFRESH";
 

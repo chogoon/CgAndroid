@@ -52,7 +52,7 @@ public abstract class BaseFragment<VDB extends ViewDataBinding, VM extends CgVie
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        TAG = getTag(this.getClass());
+        TAG = CgUtils.getTag(this.getClass());
         setContext(getActivity());
         if (viewModelFactory == null)
             viewModelFactory = ViewModelProvider.AndroidViewModelFactory.getInstance(getActivity().getApplication());
