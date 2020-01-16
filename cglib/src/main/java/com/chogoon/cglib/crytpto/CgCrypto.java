@@ -1,4 +1,4 @@
-package com.chogoon.cglib;
+package com.chogoon.cglib.crytpto;
 
 import android.content.Context;
 
@@ -21,6 +21,7 @@ import javax.crypto.spec.SecretKeySpec;
  * Created by chogoon on 2016-10-20.
  */
 
+@Deprecated
 public class CgCrypto {
 
     private static final int IV_SIZE = 16;
@@ -45,13 +46,12 @@ public class CgCrypto {
         return key;
     }
 
-    void removeFiles() {
+    public void removeFiles() {
         for (String secure_key : SECURE_KEYS) {
             File file = new File(mContext.getFilesDir(), secure_key);
             file.delete();
         }
     }
-
 
     private void readBytesFromFile(String fileName, byte[] bytes) {
         try {
@@ -95,7 +95,7 @@ public class CgCrypto {
         return file.exists();
     }
 
-    private static byte[] encryptOrDecrypt(byte[] data, SecretKey key, byte[] temp, boolean isEncrypt) {
+    private byte[] encryptOrDecrypt(byte[] data, SecretKey key, byte[] temp, boolean isEncrypt) {
         try {
             Cipher cipher = Cipher.getInstance("AES/CBC/PKCS7PADDING");
             cipher.init(isEncrypt ? Cipher.ENCRYPT_MODE : Cipher.DECRYPT_MODE, key, new IvParameterSpec(temp));
@@ -105,24 +105,24 @@ public class CgCrypto {
         }
     }
 
-    private static byte[] encryptData(byte[] data, byte[] temp, SecretKey key) {
+    private byte[] encryptData(byte[] data, byte[] temp, SecretKey key) {
         return encryptOrDecrypt(data, key, temp, true);
     }
 
-    private static byte[] decryptData(byte[] data, byte[] temp, SecretKey key) {
+    private byte[] decryptData(byte[] data, byte[] temp, SecretKey key) {
         return encryptOrDecrypt(data, key, temp, false);
     }
 
-    byte[] storeDataDecryptedWithSecureKey(byte[] encryptedData, SecretKey secureKey) {
+    public byte[] storeDataDecryptedWithSecureKey(byte[] encryptedData, SecretKey secureKey) {
         return decryptData(encryptedData, secureTemp(), secureKey);
     }
 
-    byte[] storeDataEncryptedWithSecureKey(byte[] encryptedData, SecretKey secureKey) {
+    public byte[] storeDataEncryptedWithSecureKey(byte[] encryptedData, SecretKey secureKey) {
         writeToFile(SECURE_KEYS[0], new byte[1]);
         return encryptData(encryptedData, secureTemp(), secureKey);
     }
 
-    SecretKey deriveKeySecurely(String password) {
+    public SecretKey deriveKeySecurely(String password) {
         try {
             KeySpec keySpec = new PBEKeySpec(password.toCharArray(), retrieveKey(), 100, KEY_SIZE * 8);
             SecretKeyFactory keyFactory = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA1");

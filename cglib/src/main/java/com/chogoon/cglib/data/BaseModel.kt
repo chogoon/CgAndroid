@@ -1,4 +1,4 @@
-package com.chogoon.cglib
+package com.chogoon.cglib.data
 
 import android.os.Parcel
 import android.os.Parcelable

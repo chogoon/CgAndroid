@@ -5,7 +5,7 @@ import android.view.View;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.chogoon.cglib.BaseModel;
+import com.chogoon.cglib.data.BaseModel;
 
 import java.util.ArrayList;
 import java.util.List;

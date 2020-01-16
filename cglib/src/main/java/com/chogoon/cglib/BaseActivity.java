@@ -21,6 +21,8 @@ import androidx.lifecycle.ViewModelStoreOwner;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import com.chogoon.cglib.data.BaseModel;
+
 
 public abstract class BaseActivity<VDB extends ViewDataBinding, VM extends CgViewModel> extends AppCompatActivity implements ViewModelStoreOwner, SwipeRefreshLayout.OnRefreshListener, OnSingleClickListener {
 

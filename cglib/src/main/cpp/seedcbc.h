@@ -70,11 +70,11 @@ extern "C" {
 	*/
 	void KISA_SEED_decrypt_block(const unsigned char *in, unsigned char *out, const int *seed_key);
 
-JNIEXPORT jint JNICALL Java_com_chogoon_cglib_SEEDCBC_seedCBCInit(JNIEnv* env, jobject thiz, jbyteArray userKey, jintArray seedKey);
-JNIEXPORT void JNICALL Java_com_chogoon_cglib_SEEDCBC_encryptBlock(JNIEnv* env, jobject thiz, jbyteArray In, jbyteArray Out, jint out_index, jintArray seed_key_);
-JNIEXPORT jint JNICALL Java_com_chogoon_cglib_SEEDCBC_internalSeedCBCProcessEnc(JNIEnv* env, jobject thiz, jint enc, jbyteArray seedKey, jbyteArray ivec, jbyteArray cbc_buffer, jintArray buffer_length, jbyteArray inputText, jint inputOffset, jint inputTextLen, jbyteArray outputText, jint outputOffset);
-JNIEXPORT jint JNICALL Java_com_chogoon_cglib_SEEDCBC_internalSeedCBCProcessDec(JNIEnv* env, jobject thiz, jint enc, jbyteArray seedKey, jbyteArray ivec, jbyteArray cbc_buffer, jintArray buffer_length, jbyteArray cbc_last_block, jintArray last_block_flag, jbyteArray inputText, jint inputOffset, jint inputTextLen, jbyteArray outputText, jint outputOffset);
-JNIEXPORT jint JNICALL Java_com_chogoon_cglib_SEEDCBC_internalSeedProcessBlocks(JNIEnv* env, jobject thiz, jintArray seedKey, jbyteArray ivec, jbyteArray cbc_buffer, jbyteArray outputText, jint outputTextLen);
+JNIEXPORT jint JNICALL Java_com_chogoon_cglib_crypto_SEEDCBC_seedCBCInit(JNIEnv* env, jobject thiz, jbyteArray userKey, jintArray seedKey);
+JNIEXPORT void JNICALL Java_com_chogoon_cglib_crypto_SEEDCBC_encryptBlock(JNIEnv* env, jobject thiz, jbyteArray In, jbyteArray Out, jint out_index, jintArray seed_key_);
+JNIEXPORT jint JNICALL Java_com_chogoon_cglib_crypto_SEEDCBC_internalSeedCBCProcessEnc(JNIEnv* env, jobject thiz, jint enc, jbyteArray seedKey, jbyteArray ivec, jbyteArray cbc_buffer, jintArray buffer_length, jbyteArray inputText, jint inputOffset, jint inputTextLen, jbyteArray outputText, jint outputOffset);
+JNIEXPORT jint JNICALL Java_com_chogoon_cglib_crypto_SEEDCBC_internalSeedCBCProcessDec(JNIEnv* env, jobject thiz, jint enc, jbyteArray seedKey, jbyteArray ivec, jbyteArray cbc_buffer, jintArray buffer_length, jbyteArray cbc_last_block, jintArray last_block_flag, jbyteArray inputText, jint inputOffset, jint inputTextLen, jbyteArray outputText, jint outputOffset);
+JNIEXPORT jint JNICALL Java_com_chogoon_cglib_crypto_SEEDCBC_internalSeedProcessBlocks(JNIEnv* env, jobject thiz, jintArray seedKey, jbyteArray ivec, jbyteArray cbc_buffer, jbyteArray outputText, jint outputTextLen);
 #ifdef  __cplusplus
 }
 #endif

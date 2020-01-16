@@ -9,9 +9,6 @@ import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 
-import java.math.BigInteger;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 import java.text.DecimalFormat;
 import java.util.Formatter;
 import java.util.Locale;
@@ -62,15 +59,5 @@ public class CgUtils {
         return clazz.getSimpleName();
     }
 
-    public static String getSHA256(String str) {
-        String encrypt = "";
-        try {
-            MessageDigest md = MessageDigest.getInstance("SHA-256");
-            md.update(str.getBytes(), 0, str.length());
-            encrypt = new BigInteger(1, md.digest()).toString(16);
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-        }
-        return encrypt;
-    }
+
 }

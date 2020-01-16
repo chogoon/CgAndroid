@@ -18,6 +18,7 @@ import androidx.lifecycle.ViewModelStoreOwner
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout.OnRefreshListener
+import com.chogoon.cglib.data.BaseModel
 
 abstract class KBaseActivity<VDB : ViewDataBinding, VM : BaseViewModel> : AppCompatActivity() , ViewModelStoreOwner, OnRefreshListener, OnSingleClickListener {
 
