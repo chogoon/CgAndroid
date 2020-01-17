@@ -36,7 +36,4 @@ public class BaseViewModel extends AndroidViewModel {
         error.setValue(throwable);
     }
 
-    protected int length(@NonNull String s) {
-        return isEmpty(s) ? 0 : s.length();
-    }
 }

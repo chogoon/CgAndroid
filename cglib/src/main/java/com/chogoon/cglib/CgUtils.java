@@ -16,6 +16,7 @@ import java.util.Locale;
 import okhttp3.MediaType;
 import okhttp3.RequestBody;
 
+@Deprecated
 public class CgUtils {
 
     public static boolean isNotNull(Object obj) {

@@ -5,13 +5,9 @@ import android.graphics.drawable.Drawable
 import androidx.annotation.ColorRes
 import androidx.annotation.DrawableRes
 import androidx.core.app.ActivityCompat
-import androidx.core.graphics.toColor
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.RequestBody
 import okhttp3.RequestBody.Companion.toRequestBody
-import java.lang.Exception
-import java.math.BigInteger
-import java.security.MessageDigest
 import java.text.DecimalFormat
 import java.util.*
 
@@ -57,16 +53,34 @@ object KCgUtils {
         return this.simpleName
     }
 
-    fun String.getSHA256() : String{
-        var encrypt = ""
-        try {
-            val md = MessageDigest.getInstance("SHA-256")
-            md.update(this.toByteArray(), 0, this.length)
-            encrypt = BigInteger(1, md.digest()).toString(16)
-        }catch (e : Exception){
-            e.printStackTrace()
+    fun ByteArray.toHexString(): String {
+        var hexString = ""
+        forEachIndexed { i, byte ->
+            hexString += if (i < size - 1) {
+                "%02X:".format(byte)
+            } else {
+                "%02X".format(byte)
+            }
         }
-        return encrypt
+        return hexString
     }
 
+    fun ByteArray.toHexString(length: Int): String {
+        var hexString = ""
+        forEachIndexed { i, byte ->
+            hexString += if (i != length - 1) {
+                "%02X:".format(byte)
+            } else {
+                "%02X".format(byte)
+            }
+        }
+        return hexString
+    }
+
+    fun subBytes(src: ByteArray, begin: Int, end: Int): ByteArray {
+        val length = end - begin + 1
+        val result = ByteArray(length)
+        System.arraycopy(src, begin, result, 0, length)
+        return result
+    }
 }
