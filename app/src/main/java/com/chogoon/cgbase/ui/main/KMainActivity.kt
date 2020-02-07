@@ -1,13 +1,15 @@
 package com.chogoon.cgbase.ui.main
 
 import android.os.Bundle
-import android.util.Base64
 import com.chogoon.cgbase.R
 import com.chogoon.cgbase.databinding.ActivityMainBinding
 import com.chogoon.cglib.BaseActivity
 import com.chogoon.cglib.CgLog
+import com.chogoon.cglib.KCgUtils.getTag
 import com.chogoon.cglib.KCgUtils.toCommaFormat
-import com.chogoon.cglib.crytpto.SEEDCBC
+import com.chogoon.cglib.crypto.KCrypto.Companion.decryptBase
+import com.chogoon.cglib.crypto.KCrypto.Companion.encryptBase
+import com.chogoon.cglib.crypto.KCrypto.Companion.getSHA256
 
 class KMainActivity : BaseActivity<ActivityMainBinding, MainViewModel>() {
 
@@ -18,6 +20,14 @@ class KMainActivity : BaseActivity<ActivityMainBinding, MainViewModel>() {
     override fun onCreateView(savedInstanceState: Bundle?) {
         val temp : Int = 32432432
         CgLog.e(temp.toCommaFormat())
+
+        val encrypt = encryptBase("chogoonAce")
+        binding.sample1.text = encrypt
+        binding.sample2.text = decryptBase(encrypt)
+
+        CgLog.e(12345.toCommaFormat())
+
+        binding.sample3.text = getSHA256("wrewrew")
 
     }
 

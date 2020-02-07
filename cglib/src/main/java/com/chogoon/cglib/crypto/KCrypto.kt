@@ -1,4 +1,4 @@
-package com.chogoon.cglib.crytpto
+package com.chogoon.cglib.crypto
 
 import android.content.Context
 import android.util.Base64
@@ -157,17 +157,19 @@ class KCrypto constructor(context: Context) {
             return String(plainText)
 
         }
-    }
 
-    fun getSHA256(str: String): String {
-        var encrypt = ""
-        try {
-            val md = MessageDigest.getInstance("SHA-256")
-            md.update(str.toByteArray(), 0, str.length)
-            encrypt = BigInteger(1, md.digest()).toString(16)
-        } catch (e: NoSuchAlgorithmException) {
-            e.printStackTrace()
+        @JvmStatic
+        fun getSHA256(str: String): String {
+            var encrypt = ""
+            try {
+                val md = MessageDigest.getInstance("SHA-256")
+                md.update(str.toByteArray(), 0, str.length)
+                encrypt = BigInteger(1, md.digest()).toString(16)
+            } catch (e: NoSuchAlgorithmException) {
+                e.printStackTrace()
+            }
+            return encrypt
         }
-        return encrypt
+
     }
 }

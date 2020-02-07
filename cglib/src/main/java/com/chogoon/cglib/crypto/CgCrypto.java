@@ -1,4 +1,4 @@
-package com.chogoon.cglib.crytpto;
+package com.chogoon.cglib.crypto;
 
 import android.content.Context;
 

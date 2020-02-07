@@ -258,7 +258,7 @@ void KISA_SEED_init(const unsigned char *userKey, KISA_SEED_KEY *ks)
 	UPDATE_KEY_SCHEDULE_R(k1, k2, k3, k4, T, 0xde6e678d);      UPDATE_KEY_SWAP(T, &ks->key_data[28]);
 	UPDATE_KEY_SCHEDULE_L(k1, k2, k3, k4, T, 0xbcdccf1b);      UPDATE_KEY_SWAP(T, &ks->key_data[30]);
 }
-//com.dooray.messenger
+
 JNIEXPORT jint JNICALL
 Java_com_chogoon_cglib_crypto_SEEDCBC_seedCBCInit(JNIEnv* env, jobject thiz, jbyteArray userKey, jintArray seedKey)
 {

@@ -7,6 +7,7 @@ import com.chogoon.cgbase.databinding.ActivityMainBinding;
 import com.chogoon.cglib.BaseActivity;
 import com.chogoon.cglib.CgLog;
 import com.chogoon.cglib.KCgUtils;
+import com.chogoon.cglib.crypto.KCrypto;
 
 public class MainActivity extends BaseActivity<ActivityMainBinding, MainViewModel> {
 
@@ -18,12 +19,12 @@ public class MainActivity extends BaseActivity<ActivityMainBinding, MainViewMode
     @Override
     protected void onCreateView(Bundle savedInstanceState) {
 
-        String encrypt = KMainActivity.encryptBase("chogoonAce,,");
+        String encrypt = KCrypto.encryptBase("chogoonAce,,");
         getBinding().sample1.setText(encrypt);
-        getBinding().sample2.setText(KMainActivity.decryptBase(encrypt));
+        getBinding().sample2.setText(KCrypto.decryptBase(encrypt));
 
         CgLog.e(KCgUtils.INSTANCE.commaFormat(12345));
-        KCgUtils.INSTANCE.getSHA256("wrewrew");
+        KCrypto.getSHA256("wrewrew");
         KCgUtils.INSTANCE.getTag(this.getClass());
 
     }

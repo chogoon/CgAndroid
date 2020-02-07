@@ -1,4 +1,4 @@
-package com.chogoon.cglib.crytpto;
+package com.chogoon.cglib.crypto;
 
 public class SEEDCBC {
     public static final int SEED_BLOCK_SIZE = 16;

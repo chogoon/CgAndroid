@@ -4,9 +4,9 @@ import android.content.Context;
 
 import com.chogoon.cglib.BaseUserModel;
 import com.chogoon.cglib.CgGson;
-import com.chogoon.cglib.crytpto.Installation;
+import com.chogoon.cglib.crypto.Installation;
 import com.chogoon.cglib.PreferencesManager;
-import com.chogoon.cglib.crytpto.KCrypto;
+import com.chogoon.cglib.crypto.KCrypto;
 
 import javax.crypto.SecretKey;
 
