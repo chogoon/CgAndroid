@@ -17,7 +17,7 @@ android {
         vectorDrawables.useSupportLibrary = true
         externalNativeBuild {
             cmake {
-                cppFlags ""
+                cppFlags "src/main/cpp/CMakeLists.txt'"
             }
         }
     }
