@@ -19,9 +19,9 @@ public class MainActivity extends BaseActivity<ActivityMainBinding, MainViewMode
     @Override
     protected void onCreateView(Bundle savedInstanceState) {
 
-        String encrypt = KCrypto.encryptBase("chogoonAce,,");
-        getBinding().sample1.setText(encrypt);
-        getBinding().sample2.setText(KCrypto.decryptBase(encrypt));
+//        String encrypt = KCrypto.encryptBase("chogoonAce,,");
+//        getBinding().sample1.setText(encrypt);
+//        getBinding().sample2.setText(KCrypto.decryptBase(encrypt));
 
         CgLog.e(KCgUtils.INSTANCE.commaFormat(12345));
         KCrypto.getSHA256("wrewrew");

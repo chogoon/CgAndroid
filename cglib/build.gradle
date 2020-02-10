@@ -20,15 +20,9 @@ android {
 
 //    externalNativeBuild {
 //        cmake {
-//            path 'src/main/jni/CMakeLists.txt'
+//            path file('src/main/cpp/CMakeLists.txt')
 //        }
 //    }
-
-    externalNativeBuild {
-        cmake {
-            path file('src/main/cpp/CMakeLists.txt')
-        }
-    }
 
     dataBinding.enabled = true
 
@@ -52,12 +46,12 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
-    externalNativeBuild {
-        cmake {
-            path "src/main/cpp/CMakeLists.txt"
-            version "3.10.2"
-        }
-    }
+//    externalNativeBuild {
+//        cmake {
+//            path "src/main/cpp/CMakeLists.txt"
+//            version "3.10.2"
+//        }
+//    }
 }
 
 dependencies {
