@@ -48,7 +48,7 @@ public class PageRecyclerView extends RecyclerView {
             }
         };
 
-        listCallback = new OnListChangedCallback() {
+        listCallback = new OnListChangedCallback2() {
 
             @Override
             public void onItemRangeInserted(ObservableList sender, int positionStart, int itemCount) {

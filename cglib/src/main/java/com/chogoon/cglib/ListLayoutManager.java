@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.LinearSmoothScroller;
 import androidx.recyclerview.widget.RecyclerView;
 
-
+@Deprecated
 public class ListLayoutManager extends LinearLayoutManager {
     private static final float MILLISECONDS_PER_INCH = 400f;
     private Context context;

@@ -6,6 +6,7 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+@Deprecated
 public class EdgeDecorator extends RecyclerView.ItemDecoration {
 
     private final int padding;

@@ -12,6 +12,7 @@ import android.widget.ProgressBar;
 import androidx.core.content.ContextCompat;
 
 /** only loading view */
+@Deprecated
 public class LoadingBar extends LinearLayout {
 	private Animation inAnimation;
 	private Animation outAnimation;
