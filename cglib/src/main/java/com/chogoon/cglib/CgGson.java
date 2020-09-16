@@ -5,18 +5,16 @@ import com.google.gson.GsonBuilder;
 
 import org.joda.time.DateTime;
 
-
 public class CgGson {
 	private static Gson _instance;
 
-	private CgGson(){
-		GsonBuilder builder = new GsonBuilder();
-		builder.registerTypeAdapter(DateTime.class, new DateTimeTypeConverter());
-		_instance = builder.create();
-	}
+	private CgGson(){ }
 
 	public synchronized static Gson getInstance() {
-		if (_instance == null) new CgGson();
+		if (_instance == null){
+			CgLog.e("init");
+			_instance = new GsonBuilder().registerTypeAdapter(DateTime.class, new DateTimeTypeConverter()).create();
+		}
 		return _instance;
 	}
 

@@ -173,8 +173,8 @@ public class CgLog {
 
     private static String getTag(StackTraceElement ste) {
         return ste.getClassName()
-                .replace("com.sirjuseyo", "")
-                .replace("com.sirjuseyo.", "")
+                .replace("com.chogoon.cgbase", "")
+                .replace("com.chogoon.cglib", "")
                 .replace("activity.", "")
                 .replace("activity", "")
                 .replace("fragment.", "")

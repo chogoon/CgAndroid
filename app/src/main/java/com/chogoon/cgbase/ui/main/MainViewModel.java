@@ -4,7 +4,6 @@ import android.app.Application;
 
 import com.chogoon.cglib.CgViewModel;
 
-
 public class MainViewModel extends CgViewModel<Object> {
 
 

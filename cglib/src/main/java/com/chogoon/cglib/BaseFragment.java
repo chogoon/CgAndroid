@@ -23,8 +23,6 @@ import androidx.lifecycle.ViewModelStoreOwner;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout.OnRefreshListener;
 
-import com.chogoon.cglib.OnSingleClickListener;
-
 import static com.chogoon.cglib.BaseActivity._REFRESH;
 
 

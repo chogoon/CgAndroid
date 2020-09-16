@@ -11,7 +11,8 @@ import androidx.lifecycle.MutableLiveData;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.disposables.Disposable;
 
-public abstract class CgViewModel<T> extends BaseViewModel implements CgObservable<T>, Observable, View.OnClickListener {
+@Deprecated
+public abstract class CgViewModel2<T> extends BaseViewModel implements CgObservable<T>, Observable, View.OnClickListener {
 
     public final MutableLiveData<T> liveData = new MutableLiveData<>();
     public final ObservableArrayList<T> items = new CgObservableArrayList<>();
@@ -19,7 +20,7 @@ public abstract class CgViewModel<T> extends BaseViewModel implements CgObservab
     private PropertyChangeRegistry callbacks = new PropertyChangeRegistry();
     private CompositeDisposable compositeDisposable = new CompositeDisposable();
 
-    public CgViewModel(Application application) {
+    public CgViewModel2(Application application) {
         super(application);
     }
 

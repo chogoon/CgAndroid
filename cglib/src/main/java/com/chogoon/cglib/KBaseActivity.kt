@@ -50,7 +50,7 @@ abstract class KBaseActivity<VDB : ViewDataBinding, VM : BaseViewModel> : AppCom
     lateinit var viewModelFactory : ViewModelProvider.AndroidViewModelFactory
     private val viewModelStore = ViewModelStore()
     private var lastClickTime = 0L
-    protected var TAG: String? = null
+    private var TAG: String? = null
     lateinit var viewModel: VM
     lateinit var binding: VDB
 
@@ -72,14 +72,14 @@ abstract class KBaseActivity<VDB : ViewDataBinding, VM : BaseViewModel> : AppCom
     }
 
     override fun onResume() {
-        viewModel?.error?.observe(this, Observer { it -> onError(it) })
-        viewModel?.done?.observe(this, Observer { it -> onDone(it) })
+        viewModel.error?.observe(this, Observer { onError(it) })
+        viewModel.done?.observe(this, Observer { onDone(it) })
         super.onResume()
     }
 
     override fun onPause() {
-        viewModel?.error?.removeObservers(this)
-        viewModel?.done?.removeObservers(this)
+        viewModel.error?.removeObservers(this)
+        viewModel.done?.removeObservers(this)
         super.onPause()
     }
 

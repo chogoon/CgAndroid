@@ -65,11 +65,11 @@ class KPageRecyclerView : RecyclerView {
     }
 
     private fun addOnListChangedCallback() {
-        observable!!.observableArrayList.addOnListChangedCallback(listCallback)
+        observable!!.getObservableArrayList().addOnListChangedCallback(listCallback)
     }
 
     private fun removeOnListChangedCallback() {
-        observable!!.observableArrayList.removeOnListChangedCallback(listCallback)
+        observable!!.getObservableArrayList().removeOnListChangedCallback(listCallback)
     }
 
     private fun startSmoothScroll(itemCount: Int) {

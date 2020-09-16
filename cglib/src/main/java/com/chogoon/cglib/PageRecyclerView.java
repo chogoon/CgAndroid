@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearSmoothScroller;
 import androidx.recyclerview.widget.RecyclerView;
 
+@Deprecated
 public class PageRecyclerView extends RecyclerView {
 
     private CgObservable observable;
@@ -48,7 +49,7 @@ public class PageRecyclerView extends RecyclerView {
             }
         };
 
-        listCallback = new OnListChangedCallback2() {
+        listCallback = new OnListChangedCallBack() {
 
             @Override
             public void onItemRangeInserted(ObservableList sender, int positionStart, int itemCount) {

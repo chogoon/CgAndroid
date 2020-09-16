@@ -9,7 +9,8 @@ import androidx.lifecycle.Observer;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CheckLiveData<T, V> extends MediatorLiveData<T> {
+@Deprecated
+public class CheckLiveData2<T, V> extends MediatorLiveData<T> {
 
     private List<MutableLiveData<V>> liveDatas = new ArrayList<>();
 
