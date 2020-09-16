@@ -22,6 +22,6 @@ allprojects {
 And add next dependencies in the build.gradle of the module:
 ```gradle
 dependencies {
-    implementation 'com.github.chogoon:cgbase:1.0.11'
+    implementation 'com.github.chogoon:cgbase:1.0.13'
 }
 ```
